@@ -392,9 +392,7 @@
             <span class="close-btn" onclick="closeModal()">×</span>
             <div class="contact-form" id="contactForm">
                 <h3>Contact Us</h3>
-                <form id="contactFormElement" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                    
+                <form id="contactFormElement" action="https://formspree.io/f/mvgropbd" method="POST">
                     <div class="form-group">
                         <label for="company_name">Company Name *</label>
                         <input type="text" name="company_name" id="company_name" placeholder="Enter company name" required>
@@ -407,7 +405,7 @@
                     
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                        <input type="email" name="_replyto" id="email" placeholder="Enter your email" required>
                     </div>
                     
                     <div class="form-group">
@@ -456,8 +454,7 @@
             const formContainer = document.getElementById('contactForm');
             formContainer.innerHTML = `
                 <h3>Contact Us</h3>
-                <form id="contactFormElement" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                <form id="contactFormElement" action="https://formspree.io/f/mvgropbd" method="POST">
                     <div class="form-group">
                         <label for="company_name">Company Name *</label>
                         <input type="text" name="company_name" id="company_name" placeholder="Enter company name" required>
@@ -468,7 +465,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                        <input type="email" name="_replyto" id="email" placeholder="Enter your email" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number *</label>
@@ -511,23 +508,26 @@
                 try {
                     const response = await fetch(form.action, {
                         method: 'POST',
-                        body: formData
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
                     });
                     
                     const result = await response.json();
                     
                     const formContainer = document.getElementById('contactForm');
-                    if (result.success) {
+                    if (response.ok) {
                         // Display success message
                         formContainer.innerHTML = `
                             <h3>Success!</h3>
                             <p class="success-message">Your message has been sent successfully. We'll get back to you soon!</p>
                         `;
                     } else {
-                        // Display specific error message from Web3Forms
+                        // Display error message
                         formContainer.innerHTML = `
                             <h3>Error</h3>
-                            <p class="error-message">${result.message || 'An error occurred. Please try again.'}</p>
+                            <p class="error-message">${result.error || 'An error occurred. Please try again.'}</p>
                         `;
                     }
                 } catch (error) {
