@@ -407,72 +407,76 @@
 
         .close:hover {
             color: #ccc;
-        }
+        }.form-group {
+    margin-bottom: 1rem;
+}
 
-        .form-group {
-            margin-bottom: 1rem;
-        }
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-weight: 500;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #fff;
-            font-weight: 500;
-        }
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2); /* Already adjusted for visibility */
+    color: #fff;
+    font-size: 1rem;
+}
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            font-size: 1rem;
-        }
+/* Add this new rule to style the dropdown options */
+.form-group select option {
+    background: #333; /* Dark background for options to match the theme */
+    color: #fff; /* White text for readability */
+}
 
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: #ccc;
-        }
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #ccc;
+}
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #fff;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-        }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
 
-        #enrollForm .form-content {
-            display: block;
-        }
+#enrollForm .form-content {
+    display: block;
+}
 
-        #enrollForm.loading .form-content,
-        #enrollForm.submitted .form-content {
-            display: none;
-        }
+#enrollForm.loading .form-content,
+#enrollForm.submitted .form-content {
+    display: none;
+}
 
-        .loading-message {
-            display: none;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            font-weight: 500;
-            font-size: 1.2rem;
-            animation: fadeIn 0.3s ease-in-out;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: calc(100% - 4rem);
-            height: auto;
-        }
+.loading-message {
+    display: none;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    animation: fadeIn 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4rem);
+    height: auto;
+}
 
-        #enrollForm.loading .loading-message {
-            display: block;
-        }
+#enrollForm.loading .loading-message {
+    display: block;
+}
 
         .loading-message i {
             display: block;
@@ -598,69 +602,70 @@
             transform: translateY(-3px);
         }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+       @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
 
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
 
-            .hero p {
-                font-size: 1.1rem;
-            }
+    .hero p {
+        font-size: 1.1rem;
+    }
 
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .hero-button {
-                width: 100%;
-                max-width: 250px;
-                padding: 0.8rem 1rem;
-                font-size: 1rem;
-            }
+    .hero-button {
+        width: 100%;
+        max-width: 250px;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
 
-            .features-grid,
-            .courses-grid,
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+    .features-grid,
+    .courses-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 
-            .course-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
+    .course-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .course-btn {
-                width: 100%;
-                max-width: 250px;
-                padding: 0.7rem 1rem;
-                font-size: 0.9rem;
-            }
+    .course-btn {
+        width: 100%;
+        max-width: 250px;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
 
-            .cta-button {
-                width: 100%;
-                max-width: 250px;
-                padding: 0.7rem 1rem;
-                font-size: 0.9rem;
-            }
+ .cta-button {
+    display: inline-block;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+    max-width: 150px;
+}
 
-            .modal-content {
-                width: 95%;
-                margin: 10% auto;
-                padding: 1.5rem;
-            }
 
-            .success-message {
-                width: calc(100% - 2rem);
-                max-width: 300px;
-                font-size: 1.2rem;
-                padding: 2rem;
-            }
-        }
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+
+    .success-message {
+        width: calc(100% - 2rem);
+        max-width: 300px;
+        font-size: 1.2rem;
+        padding: 2rem;
+    }
+}
 
         @keyframes fadeInUp {
             from {
@@ -681,7 +686,7 @@
 <body>
     <header>
         <nav class="container">
-            <a href="#" class="logo">UniLearners</a>
+            <a class="logo" href="#hero">UniLearners</a>
             <ul class="nav-links">
                 <li><a href="#courses">Courses</a></li>
                 <li><a href="#services">Services</a></li>
@@ -692,13 +697,13 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container">
             <h1>Master Skills, Land Your Dream Job</h1>
             <p>Transform your career with our industry-leading online courses and personalized hiring assistance. Learn from experts and secure top-tier job opportunities.</p>
             <div class="hero-buttons">
                 <a href="#courses" class="hero-button primary-button">Explore Courses</a>
-                <a href="#services" class="hero-button secondary-button">Hiring Services</a>
+                <a href="#hire.html" class="hero-button secondary-button">Hiring Services</a>
             </div>
         </div>
     </section>
@@ -758,7 +763,7 @@
                     </ul>
                     <div class="course-buttons">
                         <a href="python.html" class="course-btn btn-secondary">Course Plan</a>
-                        <a href="javascript:void(0)" onclick="openEnrollModal('Python Programming', '₹2,999')" class="course-btn btn-primary">Buy Now</a>
+                        <a href="javascript:void(0)" onclick="openEnrollModal('Python Programming', '₹29,999')" class="course-btn btn-primary">Buy Now</a>
                     </div>
                 </div>
                 <div class="course-card">
@@ -773,7 +778,7 @@
                     </ul>
                     <div class="course-buttons">
                         <a href="complete-ai.html" class="course-btn btn-secondary">Course Plan</a>
-                        <a href="javascript:void(0)" onclick="openEnrollModal('Complete AI with ML & DL', '₹12,999')" class="course-btn btn-primary">Buy Now</a>
+                        <a href="javascript:void(0)" onclick="openEnrollModal('Complete AI with ML & DL', '₹49,999')" class="course-btn btn-primary">Buy Now</a>
                     </div>
                 </div>
                 <div class="course-card">
@@ -789,7 +794,7 @@
                     </ul>
                     <div class="course-buttons">
                         <a href="generative-ai.html" class="course-btn btn-secondary">Course Plan</a>
-                        <a href="javascript:void(0)" onclick="openEnrollModal('Generative AI', '₹4,999')" class="course-btn btn-primary">Buy Now</a>
+                        <a href="javascript:void(0)" onclick="openEnrollModal('Generative AI', '₹44,999')" class="course-btn btn-primary">Buy Now</a>
                     </div>
                 </div>
                 <div class="course-card">
@@ -804,7 +809,7 @@
                     </ul>
                     <div class="course-buttons">
                         <a href="agentic-ai.html" class="course-btn btn-secondary">Course Plan</a>
-                        <a href="javascript:void(0)" onclick="openEnrollModal('Agentic AI', '₹6,999')" class="course-btn btn-primary">Buy Now</a>
+                        <a href="javascript:void(0)" onclick="openEnrollModal('Agentic AI', '₹39,999')" class="course-btn btn-primary">Buy Now</a>
                     </div>
                 </div>
                 <div class="course-card">
@@ -819,7 +824,7 @@
                     </ul>
                     <div class="course-buttons">
                         <a href="devops-mlops.html" class="course-btn btn-secondary">Course Plan</a>
-                        <a href="javascript:void(0)" onclick="openEnrollModal('DevOps & MLOps', '₹9,999')" class="course-btn btn-primary">Buy Now</a>
+                        <a href="javascript:void(0)" onclick="openEnrollModal('DevOps & MLOps', '₹34,999')" class="course-btn btn-primary">Buy Now</a>
                     </div>
                 </div>
                 <div class="course-card">
@@ -828,13 +833,13 @@
                     <p>Design scalable and secure cloud solutions with AWS, Azure, and GCP.</p>
                     <ul class="course-features">
                         <li>Cloud Models & Services</li>
-                        <li>AWS EC2 & S3</li> 
+                        <li>AWS EC2 & S3</li>
                         <li>Azure & GCP Fundamentals</li>
                         <li>Certification Prep</li>
                     </ul>
                     <div class="course-buttons">
                         <a href="cloud-architecture.html" class="course-btn btn-secondary">Course Plan</a>
-                        <a href="javascript:void(0)" onclick="openEnrollModal('Cloud Architecture', '₹9,999')" class="course-btn btn-primary">Buy Now</a>
+                        <a href="javascript:void(0)" onclick="openEnrollModal('Cloud Architecture', '₹39,999')" class="course-btn btn-primary">Buy Now</a>
                     </div>
                 </div>
                 <div class="course-card">
@@ -849,7 +854,7 @@
                     </ul>
                     <div class="course-buttons">
                         <a href="ux-ui.html" class="course-btn btn-secondary">Course Plan</a>
-                        <a href="javascript:void(0)" onclick="openEnrollModal('UX/UI Design', '₹2,999')" class="course-btn btn-primary">Buy Now</a>
+                        <a href="javascript:void(0)" onclick="openEnrollModal('UX/UI Design', '₹29,999')" class="course-btn btn-primary">Buy Now</a>
                     </div>
                 </div>
             </div>
@@ -963,7 +968,7 @@
                     <div class="form-group">
                         <label for="experience">Experience Level</label>
                         <select id="experience" name="experience" required>
-                            <option value="">Select your experience level</option>
+                           <!-- <option value="">Select your experience level</option>-->
                             <option value="Beginner">Beginner</option>
                             <option value="Intermediate">Intermediate</option>
                             <option value="Advanced">Advanced</option>
@@ -1139,13 +1144,8 @@
             const phoneInputs = document.querySelectorAll('input[type="tel"]');
             phoneInputs.forEach(input => {
                 input.addEventListener('input', function(e) {
-                    let value = e.target.value.replace(/\D/g, '');
-                    if (value.length >= 6) {
-                        value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
-                    } else if (value.length >= 3) {
-                        value = value.replace(/(\d{3})(\d{3})/, '($1) $2');
-                    }
-                    e.target.value = value;
+                    let value = e.target.value.replace(/\D/g, ''); // Remove all non-digit characters
+                    e.target.value = value; // Set the value as plain digits
                 });
             });
 
@@ -1367,7 +1367,7 @@
                     entry.target.classList.add('animate-fade-in');
                     if (entry.target.classList.contains('stats')) {
                         animateCounter(document.getElementById('students-count'), 500);
-                        animateCounter(document.getElementById('placement-rate'), 10);
+                        animateCounter(document.getElementById('placement-rate'), 100);
                         animateCounter(document.getElementById('companies-count'), 50);
                         animateCounter(document.getElementById('courses-count'), 8);
                     }
